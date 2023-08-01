@@ -1,6 +1,10 @@
 {
   "folders": [
-    { "name": "flights", "path": "packages/flights" },
+    {
+      "name": "objects-arrays",
+      "path": "packages/objects-arrays"
+    },
+    { "name": "variables", "path": "packages/variables" },
     { "name": "website", "path": "packages/website" },
     { "name": "hello-ts", "path": "packages/hello-ts" }
   ],
