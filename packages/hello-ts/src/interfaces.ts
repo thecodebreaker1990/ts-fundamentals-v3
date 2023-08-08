@@ -13,3 +13,7 @@ export interface AnimalLike {
 export interface CanBark {
   bark(): string;
 }
+
+export interface TwoNumberCalculation {
+  (x: number, y: number): number;
+}
