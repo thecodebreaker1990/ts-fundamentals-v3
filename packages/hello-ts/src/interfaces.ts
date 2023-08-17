@@ -17,3 +17,9 @@ export interface CanBark {
 export interface TwoNumberCalculation {
   (x: number, y: number): number;
 }
+
+export interface PhoneInfo {
+  customerID: string;
+  areaCode: string;
+  number: string;
+}
