@@ -1,28 +1,28 @@
-import { PhoneInfo } from './interfaces';
+import { PhoneInfo, HasId, Dict } from './interfaces';
 
 const phoneList: PhoneInfo[] = [
   {
-    customerID: '0001',
+    id: '0001',
     areaCode: '123',
     number: '555-1234',
   },
   {
-    customerID: '0002',
+    id: '0002',
     areaCode: '456',
     number: '555-5678',
   },
   {
-    customerID: '0003',
+    id: '0003',
     areaCode: '789',
     number: '555-7890',
   },
   {
-    customerID: '0004',
+    id: '0004',
     areaCode: '234',
     number: '555-2345',
   },
   {
-    customerID: '0005',
+    id: '0005',
     areaCode: '567',
     number: '555-6789',
   },
@@ -42,6 +42,16 @@ function listToDict<T>(
   return dict;
 }
 
-console.log(
-  listToDict(phoneList, (item) => item.customerID),
-);
+function listWithIdToDict<T extends HasId>(
+  list: T[],
+): Dict<T> {
+  const dict: Dict<T> = {};
+
+  for (let item of list) {
+    dict[item.id] = item;
+  }
+
+  return dict;
+}
+
+console.log(listToDict(phoneList, (item) => item.id));

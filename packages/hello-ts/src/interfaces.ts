@@ -18,8 +18,15 @@ export interface TwoNumberCalculation {
   (x: number, y: number): number;
 }
 
-export interface PhoneInfo {
-  customerID: string;
+export interface PhoneInfo extends HasId {
   areaCode: string;
   number: string;
+}
+
+export interface HasId {
+  id: string;
+}
+
+export interface Dict<T> {
+  [k: string]: T;
 }
